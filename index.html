@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Global styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .container {
+    max-width: 1000px; /* Set a maximum width for responsiveness */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  /* Navigation bar */
+  .navbar {
+    background-color: #555;
+    overflow: auto;
+    padding: 10px 20px; /* Add some padding for better visuals */
+    display: flex; /* Use flexbox for easy alignment */
+    justify-content: space-between; /* Space items evenly across the navbar */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .navbar a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 7px;
+    text-decoration: none; /* Remove underline */
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Information container */
+  .container-info {
+    display: grid;
+    grid-gap: 10px;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .container-info > div:nth-child(3),
+  .container-info > div:nth-child(4) { /* Style the last two divs for desktop stacking */
+    display: none;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container-info {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop layout */
+    }
+
+    .container-info > div:nth-child(3),
+    .container-info > div:nth-child(4) { /* Show the last two divs on desktop */
+      display: block;
+    }
+  }
+
+  .container-info > div {
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .texto {
+    padding-bottom: 10px; /* Adjust padding for better spacing */
+  }
+
+  .box img {
+    max-width: 100%;
+    height: 300px;
+    display: block; /* Ensure image takes up full width */
+    margin: 0 auto;
+  }
+
+  /* Recommendation container */
+  .container-ref {
+    display: flex;
+    grid-gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .recomendacion {
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* Responsive media queries */
+  @media only screen and (max-width: 768px) {
+    .container-info {
+      grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .container-ref {
+        display: block;
+      /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns for recommendations */
+    }
+  }
+
+
+  /* REcomendaciones */
+  .review-image img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+  .comprar {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  }
+  .footer {
+    text-align: center;
+    background-color: coral;
+    
+  }
+  .footer a:hover {
+    color: black;
+  }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a>
+            <img class="logo" src="pngwing.com.png" alt="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#new">News</a></li> 
+        </ul>
+    </div>
+
+    <div class="container-info">
+        <div class="box">
+            <div class="titulo">
+                <h1>Apuesta Aquí</h1>
+            </div>
+            <div class="texto">
+                Descubre la adrenalina de las carreras de caballos y apuesta por tu favorito para ganar grandes premios. En nuestra plataforma, te ofrecemos la oportunidad de participar en emocionantes carreras y poner a prueba tus habilidades de predicción.
+
+                ¿Qué ofrecemos?
+                <ul>
+                    <li>Una amplia selección de caballos, cada uno con su propia personalidad y habilidades únicas.
+                    </li>
+                    <li>Carreras emocionantes en diversos escenarios, desde pistas de velocidad hasta desafíos de obstáculos.
+                    </li>
+                    <li>Una experiencia de apuestas segura y justa, donde cada apostador tiene la misma oportunidad de ganar.
+                    </li>
+                    <li>¡Únete a nosotros y sumérgete en el apasionante mundo de las Apuestas de Caballos!
+                    </li>
+                </ul>
+            </div>
+            <div class="comprar">
+                <button >Empieza a apostar!</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="Imagen1.jpg">
+        </div>
+        <div class="box">
+            <img src="Imagen2.jpg">
+        </div>
+        <div class="box">
+            <p>Sé testigo de la grandeza y la emoción de las carreras de caballos mientras estos magníficos ejemplares compiten por el título de campeón. ¡Apuesta por la emoción y vive la pasión de las carreras con Tormenta China y sus compañeros de élite!</p>
+
+        </div>
+    </div>
+
+
+    <div class="container-ref">
+        <div class="recomendacion">
+            <div class="review-image">
+                <img src="placeholder.png" alt="Generic Image">
+              </div>
+              <div class="review-content">
+                <h2 class="review-title">Tormenta China</h2>
+                <p class="review-text">Con su nombre evocador y su imponente presencia, este galope imparable desafía a los vientos y conquista la pista con su destreza inigualable. ¡Prepárate para sentir la furia de su paso!</p>
+              </div>
+        </div>
+        <div class="recomendacion">
+            <div class="review-image">
+                <img src="placeholder.png" alt="Generic Image">
+              </div>
+              <div class="review-content">
+                <h2 class="review-title">Rayo Veloz</h2>
+                <p class="review-text">Como un relámpago en la oscuridad, Rayo Veloz surca los campos de batalla de las carreras, dejando a su paso la estela del triunfo y la velocidad. ¡Siente la energía pura de su velocidad inigualable!</p>
+              </div>
+        </div>
+        <div class="recomendacion">
+            <div class="review-image">
+                <img src="placeholder.png" alt="Generic Image">
+              </div>
+              <div class="review-content">
+                <h2 class="review-title">Estrella Fugaz</h2>
+                <p class="review-text">Brillante y efímera, Estrella Fugaz ilumina el cielo de las carreras con su gracia y encanto. Su elegancia en la pista es tan cautivadora como su determinación por alcanzar la victoria. ¡Déjate llevar por su esplendor!</p>
+              </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <a href=""> Link Desarrollador</a>>
+    </div>
+</body>
+</html>
